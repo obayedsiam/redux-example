@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement } from './counterSlice'
+import { multiplication } from './multiplySlice'
 
 
 export function Counter(){
@@ -23,6 +24,15 @@ export function Counter(){
                    onClick={()=>{dispatch(decrement())}}
                 >
                     Decrement
+                </button>
+               
+            </div>
+            <div className="align-center">
+            <button
+                   aria-label = " Double the value"
+                   onClick={()=>{dispatch(multiplication())}}
+                >
+                  Multiply
                 </button>
             </div>
         </div>
