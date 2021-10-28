@@ -1,16 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 export const multiplySlice = createSlice({
     name: 'multiply',
-    initialState: {productValue : 2},
+    initialState: {value : 2},
     reducers : {
-        multiplication: 
-        (state)=>{
-            state.value = state.value * state.productValue
-        }
+        multiplication:(state,action)=>{
+            state.value = state.value*2
+        }       
     }
     })
 
-    export const multiplication = multiplySlice.actions
+    export const {multiplication} = multiplySlice.actions
     export default multiplySlice.reducer

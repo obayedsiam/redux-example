@@ -5,7 +5,9 @@ import { multiplication } from './multiplySlice'
 
 
 export function Counter(){
-    const count = useSelector((state) => state.counter.value)
+    //const count = useSelector((state) => state.counter.value)
+    const countMultiply = useSelector((state) => state.multiply.value)
+    
     const dispatch = useDispatch()
 
     return (
@@ -18,22 +20,25 @@ export function Counter(){
                     }}>
                         Increment
                 </button>
-                <span>{count}</span>
+                <span>{countMultiply}</span>
                 <button
                    aria-label = "Decrement value"
                    onClick={()=>{dispatch(decrement())}}
                 >
                     Decrement
                 </button>
-               
+                
             </div>
             <div className="align-center">
             <button
                    aria-label = " Double the value"
-                   onClick={()=>{dispatch(multiplication())}}
+                   onClick={()=>{
+                   // console.log("Clicked to multiply")   
+                    dispatch(multiplication())
+                }}
                 >
                   Multiply
-                </button>
+            </button>
             </div>
         </div>
     )

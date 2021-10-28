@@ -5,7 +5,7 @@ import multiplyReducer from './features/counter/multiplySlice'
 export default configureStore({ 
     reducer:{ 
         counter : counterReducer,
-        multiply : multiplyReducer,
+        multiply : multiplyReducer, 
       }
 }
 )
